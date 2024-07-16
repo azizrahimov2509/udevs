@@ -13,8 +13,28 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      keyframes: {
+        "slide-in": {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(0)" },
+        },
+        "slide-out": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(100%)" },
+        },
+      },
+      animation: {
+        "slide-in": "slide-in 0.3s ease-out forwards",
+        "slide-out": "slide-out 0.3s ease-in forwards",
+      },
+      screens: {
+        custom: { max: "902px" },
+        phone: { max: "620px" },
+        phonesm: { max: "520px" },
+      },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };
+
 export default config;
