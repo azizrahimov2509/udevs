@@ -28,7 +28,9 @@ const config: Config = {
         "slide-out": "slide-out 0.3s ease-in forwards",
       },
       screens: {
-        custom: { max: "902px" },
+        big: { max: "1200px" },
+        custom: { max: "920px" },
+        iPad: { max: "820px" },
         phone: { max: "620px" },
         phonesm: { max: "520px" },
       },

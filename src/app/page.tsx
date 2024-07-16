@@ -1,7 +1,7 @@
 "use client";
 
 import { logo } from "@/app/components/Images";
-import Image from "next/image";
+
 import Link from "next/link";
 import Typewriter from "./components/Typewriter";
 import { translations, Language } from "@/contexts/translation";
@@ -14,6 +14,8 @@ import { useEffect } from "react";
 import Erpsystem from "./components/erpsystem";
 import UiDesign from "./components/uidesign";
 import Optimization from "./components/optimization";
+import ItConsulting from "./components/itconsulting";
+import Tools from "./components/tools";
 
 export default function Home() {
   const { state } = useLanguage();
@@ -124,6 +126,18 @@ export default function Home() {
       <section id="optimization" className="flex mt-7 px-6 bg-[#f4f7ff] ">
         <div className="container">
           <Optimization />
+        </div>
+      </section>
+
+      <section id="consulting" className="flex mt-7 px-6">
+        <div className="container">
+          <ItConsulting />
+        </div>
+      </section>
+
+      <section id="tools" className="flex mt-7 px-6 bg-[#f4f7ff] ">
+        <div className="container">
+          <Tools />
         </div>
       </section>
     </>

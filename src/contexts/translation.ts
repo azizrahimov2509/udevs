@@ -1,60 +1,37 @@
 export type Language = "eng" | "ru";
 
 export interface Translations {
-  [key: string]: {
-    direction: string;
-    command: string;
-    services: string;
-    tools: string;
-    clients: string;
-    portfolio: string;
-    languages: string;
-    mobile: string;
-    erp: string;
-    interface: string;
-    consulting: string;
-    optimization: string;
-    contact: string;
-    devmobapp: string;
-    collaborationStartUp: string;
-    technologies: string;
-    erpSystem: string;
-    itSystem: string;
-    uiDesign: string;
-    approach: string;
-  };
+  direction: string;
+  command: string;
+  services: string;
+  tools: string;
+  clients: string;
+  portfolio: string;
+  languages: string;
+  mobile: string;
+  erp: string;
+  interface: string;
+  consulting: string;
+  optimization: string;
+  contact: string;
+  outsourse: string;
+  team: string;
+  ourservices: string;
+  project: string;
+  dedicatedTeam: string;
+  devmobapp: string;
+  collaborationStartUp: string;
+  technologies: string;
+  erpSystem: string;
+  itSystem: string;
+  uiDesign: string;
+  approach: string;
+  optInfras: string;
+  exports: string;
+  impqualific: string;
 }
 
-export const translations: Record<
-  Language,
-  {
-    direction: string;
-    command: string;
-    services: string;
-    tools: string;
-    clients: string;
-    portfolio: string;
-    languages: string;
-    mobile: string;
-    erp: string;
-    interface: string;
-    consulting: string;
-    optimization: string;
-    contact: string;
-    outsourse: string;
-    team: string;
-    ourservices: string;
-    project: string;
-    dedicatedTeam: string;
-    devmobapp: string;
-    collaborationStartUp: string;
-    technologies: string;
-    erpSystem: string;
-    itSystem: string;
-    uiDesign: string;
-    approach: string;
-  }
-> = {
+export const translations: Record<Language, Translations> = {
   eng: {
     direction: "Direction",
     command: "Command",
@@ -84,6 +61,11 @@ export const translations: Record<
       "IT Systems of any level of complexity at a convenient time for you",
     uiDesign: "UI / UX design",
     approach: "Our company takes a human-centered approach to design",
+    optInfras: "Optimization Infrastructure",
+    exports:
+      "Our experienced professionals will help you optimize your infrastructure",
+    impqualific:
+      "We can improve the qualifications of your employees thereby increasing the efficiency of your company",
   },
   ru: {
     direction: "Услуги",
@@ -114,5 +96,10 @@ export const translations: Record<
     uiDesign: "UI / UX Дизайн",
     approach:
       "Наша компания придерживается подхода к дизайну, ориентированного на человека..",
+    optInfras: "Оптимизация инфраструктуры",
+    exports:
+      "Наши опытные специалисты помогут оптимизировать вашу инфраструктуру.",
+    impqualific:
+      "Мы можем повысить квалификацию ваших сотрудников тем самым увеличить эффективность вашей компании.",
   },
 };

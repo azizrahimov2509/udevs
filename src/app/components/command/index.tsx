@@ -87,7 +87,6 @@ export default function Command() {
             </div>
           </motion.div>
 
-          {/* Изображение для больших экранов */}
           {!isCustomScreen && (
             <motion.div
               initial={{ opacity: 0, x: 30 }}

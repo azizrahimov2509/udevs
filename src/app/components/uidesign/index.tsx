@@ -30,7 +30,7 @@ export default function UiDesign() {
   return (
     <motion.section
       id="command"
-      className="flex mt-16 px-6 py-10 "
+      className="flex mt-16 px-6 py-10 h-[100vh] custom:h-[160vh] phone:h-[145vh] "
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}

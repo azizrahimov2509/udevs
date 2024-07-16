@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/context";
 import { translations, Language } from "@/contexts/translation";
-import { useMediaQuery } from "react-responsive";
+
 import { crm, eCommerce, eLearning, pos, smsEmail, warehouse } from "../Images";
 
 export default function Erpsystem() {

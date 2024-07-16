@@ -63,7 +63,7 @@ export default function Mobile() {
           </div>
         )}
 
-        <div className="flex items-start justify-between pb-20 custom:flex-col custom:items-center gap-7 phone:pb-0">
+        <div className="flex items-start justify-between pb-20 custom:flex-col custom:items-center custom:pb-0 gap-7 phone:pb-0">
           <motion.div
             className="flex flex-col gap-4 w-[547px] h-[351px] custom:w-auto custom:h-auto custom:items-center"
             initial={{ opacity: 0, y: -20 }}
@@ -105,7 +105,7 @@ export default function Mobile() {
               >
                 {t.technologies}
               </motion.h1>
-              <div className="flex items-center gap-10 flex-wrap">
+              <div className="flex items-center gap-10 flex-wrap ">
                 <div>
                   <img src={swift} alt="swift" />
                   <p className="text-[20px] font-semibold text-black">Swift</p>
