@@ -20,7 +20,7 @@ export default function Optimization() {
   return (
     <motion.section
       id="command"
-      className="flex mt-16 px-6 py-9 h-[100vh] custom:h-[160vh]"
+      className="flex mt-9 px-6 py-9 custom:mt-0 big:h-[750px] custom:h-[1260px] "
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}

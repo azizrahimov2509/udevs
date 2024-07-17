@@ -14,7 +14,7 @@ export default function ItConsulting() {
   return (
     <motion.section
       id="command"
-      className="flex mt-16 px-6 py-9"
+      className="flex mt-9 px-6 py-6 custom:mt-0"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}

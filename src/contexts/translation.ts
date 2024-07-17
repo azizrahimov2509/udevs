@@ -29,6 +29,7 @@ export interface Translations {
   optInfras: string;
   exports: string;
   impqualific: string;
+  ourclients: string;
 }
 
 export const translations: Record<Language, Translations> = {
@@ -66,6 +67,7 @@ export const translations: Record<Language, Translations> = {
       "Our experienced professionals will help you optimize your infrastructure",
     impqualific:
       "We can improve the qualifications of your employees thereby increasing the efficiency of your company",
+    ourclients: "Our clients",
   },
   ru: {
     direction: "Услуги",
@@ -101,5 +103,6 @@ export const translations: Record<Language, Translations> = {
       "Наши опытные специалисты помогут оптимизировать вашу инфраструктуру.",
     impqualific:
       "Мы можем повысить квалификацию ваших сотрудников тем самым увеличить эффективность вашей компании.",
+    ourclients: "Наши клиенты",
   },
 };

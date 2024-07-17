@@ -16,6 +16,7 @@ import UiDesign from "./components/uidesign";
 import Optimization from "./components/optimization";
 import ItConsulting from "./components/itconsulting";
 import Tools from "./components/tools";
+import Clients from "./components/clients";
 
 export default function Home() {
   const { state } = useLanguage();
@@ -93,13 +94,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="direction" className="flex pt-10 px-6">
+      <section id="direction" className="flex pt-2 px-6">
         <div className="container">
           <Direction />
         </div>
       </section>
 
-      <section id="command" className="flex mt-7 px-6 bg-[#f4f7ff]">
+      <section id="command" className="flex mt-2 px-6 bg-[#f4f7ff]">
         <div className="container">
           <Command />
         </div>
@@ -111,33 +112,39 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="erp" className="flex mt-7 px-6 bg-[#f4f7ff]">
+      <section id="erp" className="flex mt-2 px-6 bg-[#f4f7ff]">
         <div className="container">
           <Erpsystem />
         </div>
       </section>
 
-      <section id="design" className="flex mt-7 px-6 ">
+      <section id="design" className="flex mt-2 px-6 ">
         <div className="container">
           <UiDesign />
         </div>
       </section>
 
-      <section id="optimization" className="flex mt-7 px-6 bg-[#f4f7ff] ">
+      <section id="optimization" className="flex mt-2 px-6 bg-[#f4f7ff] ">
         <div className="container">
           <Optimization />
         </div>
       </section>
 
-      <section id="consulting" className="flex mt-7 px-6">
+      <section id="consulting" className="flex mt-2 px-6">
         <div className="container">
           <ItConsulting />
         </div>
       </section>
 
-      <section id="tools" className="flex mt-7 px-6 bg-[#f4f7ff] ">
+      <section id="tools" className="flex mt-2 px-6 bg-[#f4f7ff] ">
         <div className="container">
           <Tools />
+        </div>
+      </section>
+
+      <section id="clients" className="flex mt-2 px-6  ">
+        <div className="container">
+          <Clients />
         </div>
       </section>
     </>

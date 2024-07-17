@@ -23,7 +23,7 @@ export default function Tools() {
   return (
     <motion.section
       id="command"
-      className="flex flex-col mt-16 px-6 py-9"
+      className="flex flex-col mt-9 px-6 py-9 custom:mt-0 "
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}

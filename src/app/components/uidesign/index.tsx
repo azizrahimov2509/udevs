@@ -30,7 +30,7 @@ export default function UiDesign() {
   return (
     <motion.section
       id="command"
-      className="flex mt-16 px-6 py-10 h-[100vh] custom:h-[160vh] phone:h-[145vh] "
+      className="flex mt-9 px-6 py-9 custom:mt-0 big:h-[750px] custom:h-[1260px] phone:h-[1000px] "
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -145,27 +145,39 @@ export default function UiDesign() {
               </motion.h1>
               <div className="flex items-center gap-10 flex-wrap">
                 <div>
-                  <img src={figma} alt="swift" />
-                  <p className="text-[20px] font-semibold text-black">Figma</p>
+                  <img
+                    src={figma}
+                    alt="swift"
+                    className="pb-1 custom:w-[38px] custom:h-[38px] "
+                  />
+                  <p className="text-[20px] font-semibold text-black  custom:text-[16px]">
+                    Figma
+                  </p>
                 </div>
                 <div>
-                  <img src={sketch} alt="kotlin" />
-                  <p className="text-[20px] font-semibold text-black">Sketch</p>
+                  <img
+                    src={sketch}
+                    alt="kotlin"
+                    className="pb-1 custom:w-[38px] custom:h-[38px] "
+                  />
+                  <p className="text-[20px] font-semibold text-black  custom:text-[16px]">
+                    Sketch
+                  </p>
                 </div>
                 <div>
                   <img
                     src={lottie}
                     alt="flutter"
-                    width={50}
-                    height={50}
-                    className="pb-1"
+                    className="pb-1 custom:w-[38px] custom:h-[38px] "
                   />
-                  <p className="text-[20px] font-semibold text-black">Lottie</p>
+                  <p className="text-[20px] font-semibold text-black  custom:text-[16px]">
+                    Lottie
+                  </p>
                 </div>
 
                 <div>
                   <img src={illustrator} alt="flutter" />
-                  <p className="text-[20px] font-semibold text-black">
+                  <p className="text-[20px] font-semibold text-black  custom:text-[16px]">
                     Illustrator
                   </p>
                 </div>

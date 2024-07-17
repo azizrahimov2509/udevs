@@ -19,7 +19,7 @@ function Direction() {
   return (
     <motion.section
       id="direction"
-      className=" px-6 custom:h-[100vh] mt-10  phone:h-[190vh] "
+      className="flex mt-7 px-6 py-7 custom:mt-0 big:h-[860px] custom:h-[780px] phone:h-[1500px]"
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
