@@ -39,7 +39,7 @@ export default function Tools() {
         </motion.h1>
 
         <div className="flex flex-col pb-20">
-          <div className="mb-4 flex  custom:grid custom:grid-cols-2 ">
+          <div className="mb-4 flex  custom:grid custom:grid-cols-2  ">
             {[
               "Frontend",
               "Backend",
@@ -52,7 +52,7 @@ export default function Tools() {
             ].map((category, index) => (
               <label
                 key={index}
-                className="flex items-center mr-4 text-sm font-bold text-black leading-[30px]"
+                className="flex items-center mr-4 phone:mr-0 text-sm font-bold text-black leading-[30px]"
               >
                 <input
                   type="radio"
@@ -86,7 +86,7 @@ export default function Tools() {
             }
           `}</style>
 
-          <div className="grid grid-cols-12 phone:grid-cols-5 custom:grid-cols-5  gap-y-3 gap-x-3">
+          <div className="grid grid-cols-12  custom:grid-cols-5 phone:grid-cols-4  gap-y-3 gap-x-3">
             {tools.map((tool, index) => (
               <motion.div
                 key={index}
@@ -106,7 +106,7 @@ export default function Tools() {
                   height={24}
                   className="w-6 h-6 mb-2"
                 />
-                <span className="text-[11px] font-normal iPad:text-[9px] phone:px-2">
+                <span className="text-[11px] font-normal iPad:text-[9px] phone:px-0">
                   {tool.name}
                 </span>
               </motion.div>
