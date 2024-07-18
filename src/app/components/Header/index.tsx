@@ -309,12 +309,12 @@ const Header: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.2 }}
               >
-                <Link
-                  href="#contacts"
+                <a
+                  href="#contact"
                   className="btn btn-primary px-4 py-[10px] w-[112px] h-[20px] text-white hover:scale-110"
                 >
                   {t.contact}
-                </Link>
+                </a>
               </motion.div>
             </div>
 

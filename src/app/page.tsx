@@ -17,6 +17,12 @@ import Optimization from "./components/optimization";
 import ItConsulting from "./components/itconsulting";
 import Tools from "./components/tools";
 import Clients from "./components/clients";
+import Deliver from "./components/deliver";
+import Smsuz from "./components/smsuz";
+import Goodzone from "./components/goodzone";
+import Iman from "./components/iman";
+import HowWeWork from "./components/howWework";
+import Contact from "./components/contact";
 
 export default function Home() {
   const { state } = useLanguage();
@@ -145,6 +151,42 @@ export default function Home() {
       <section id="clients" className="flex mt-2 px-6  ">
         <div className="container">
           <Clients />
+        </div>
+      </section>
+
+      <section id="deliver" className="flex mt-2 px-6  ">
+        <div className="container">
+          <Deliver />
+        </div>
+      </section>
+
+      <section id="sms-uz" className="flex mt-2 px-6  ">
+        <div className="container">
+          <Smsuz />
+        </div>
+      </section>
+
+      <section id="goodzone" className="flex mt-2 px-6  ">
+        <div className="container">
+          <Goodzone />
+        </div>
+      </section>
+
+      <section id="iman" className="flex mt-2 px-6  ">
+        <div className="container">
+          <Iman />
+        </div>
+      </section>
+
+      <section id="work" className="flex mt-2 px-6  ">
+        <div className="container">
+          <HowWeWork />
+        </div>
+      </section>
+
+      <section id="contact" className="flex mt-2 px-6  ">
+        <div className="container">
+          <Contact />
         </div>
       </section>
     </>

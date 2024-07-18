@@ -30,6 +30,27 @@ export interface Translations {
   exports: string;
   impqualific: string;
   ourclients: string;
+  deliverService: string;
+  whatDidWe: string;
+  smstext: string;
+  imantext: string;
+  goodzonetext: string;
+  howWeWork: string;
+  contactphone: string;
+  sendus: string;
+  analysis: string;
+  analysText: string;
+  offer: string;
+  offerText: string;
+  teamtext: string;
+  start: string;
+  getstart: string;
+  contactus: string;
+  leaveMessage: string;
+  name: string;
+  email: string;
+  descproject: string;
+  send: string;
 }
 
 export const translations: Record<Language, Translations> = {
@@ -68,6 +89,30 @@ export const translations: Record<Language, Translations> = {
     impqualific:
       "We can improve the qualifications of your employees thereby increasing the efficiency of your company",
     ourclients: "Our clients",
+    deliverService:
+      "Delever - Delivery service automation targeted at both consumers and restaurants.",
+    whatDidWe: "What we did?",
+    smstext: "Smsuz.uz - It is a platform for bulk SMS messaging.",
+    imantext:
+      "Iman - It is a mutual financing platform based on the principles of Islamic Finance. Buyers, sellers and investors meet here.",
+    goodzonetext:
+      "Goodzone - Internet shop of household appliances in Uzbekistan.",
+    howWeWork: "How we work?",
+    contactphone: "Сontact",
+    sendus: "Send us your project request or project idea.",
+    analysis: "Analysis",
+    analysText: "You will get to know the team and we'll get started.",
+    offer: "Offer",
+    offerText: "We will provide you with our free, non-binding application.",
+    teamtext: "We provide a team for your requirements.",
+    start: "Start",
+    getstart: "You will get to know the team and we'll get started.",
+    contactus: "Contact us",
+    leaveMessage: "Leave a message",
+    name: "Name",
+    email: "Your email",
+    descproject: "Briefly describe your project",
+    send: "Send",
   },
   ru: {
     direction: "Услуги",
@@ -104,5 +149,29 @@ export const translations: Record<Language, Translations> = {
     impqualific:
       "Мы можем повысить квалификацию ваших сотрудников тем самым увеличить эффективность вашей компании.",
     ourclients: "Наши клиенты",
+    deliverService:
+      "Delever — Автоматизация службы доставки ориентированая как на потребителей так и на рестораны.",
+    whatDidWe: "Мы разрабатывали:",
+    smstext: "Smsuz.uz — Это платформа для массовых смс рассылок.",
+    imantext:
+      "Iman — это платформа взаимного финансирования, основанная на принципах «Исламских финансов». Здесь встречаются покупатели, продавцы и инвесторы.",
+    goodzonetext: "Goodzone — Интернет магазин бытовой техники в Узбекистане.",
+    howWeWork: "Как мы работаем?",
+    contactphone: "Связь",
+    sendus: "Отправьте нам свой запрос на проект или идею проекта.",
+    analysis: "Анализ",
+    analysText: "Мы свяжемся с вами, чтобы уточнить ваши требования к проекту.",
+    offer: "Предложение",
+    offerText:
+      "Мы предоставим вам нашу бесплатную, не имеющую обязательной силы заявку.",
+    teamtext: "Мы выделяем команду под ваши требования.",
+    start: "Начать",
+    getstart: "Вы познакомитесь с командой, и мы начнем.",
+    contactus: "Свяжитесь с нами",
+    leaveMessage: "Оставьте нам сообщение",
+    name: "Имя",
+    email: "Ваша почта",
+    descproject: "Кратко опишите свой проект",
+    send: "Отправить",
   },
 };

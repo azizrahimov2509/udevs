@@ -4,19 +4,13 @@ import { useLanguage } from "@/contexts/context";
 import { translations, Language } from "@/contexts/translation";
 import { useMediaQuery } from "react-responsive";
 import {
-  android,
-  apple,
   atomicDesign,
-  crossplatform,
   figma,
-  flutter,
   illustrator,
-  kotlin,
   lottie,
   mob,
   prototyping,
   sketch,
-  swift,
   ui,
   ux,
   webDesign,
@@ -30,7 +24,7 @@ export default function UiDesign() {
   return (
     <motion.section
       id="command"
-      className="flex mt-9 px-6 py-9 custom:mt-0 big:h-[750px] custom:h-[1260px] phone:h-[1000px] "
+      className="flex mt-9 px-6 py-9 custom:mt-0 big:h-[750px] custom:h-[1260px] phone:h-[1110px] phonesm:h-[1100px] small:h-[1020px]"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}

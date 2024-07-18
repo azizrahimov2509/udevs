@@ -33,6 +33,13 @@ const config: Config = {
         iPad: { max: "820px" },
         phone: { max: "620px" },
         phonesm: { max: "520px" },
+        small: { max: "500px" },
+        screen430: {
+          max: "430px",
+        },
+      },
+      rotate: {
+        "90": "90deg",
       },
     },
   },

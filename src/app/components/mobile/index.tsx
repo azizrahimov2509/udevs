@@ -20,7 +20,7 @@ export default function Mobile() {
   return (
     <motion.section
       id="command"
-      className="flex mt-9 px-6 py-9 custom:mt-0 big:h-[750px] custom:h-[930px]"
+      className="flex mt-9 px-6 py-9 custom:mt-0 big:h-[750px] custom:h-[1050px] phonesm:h-[1000px]  "
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}

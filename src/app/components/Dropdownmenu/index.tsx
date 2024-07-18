@@ -123,7 +123,7 @@ const DropdownMenu = () => {
 
             <div className="mt-28 px-3 w-full">
               <a
-                href={"/contact"}
+                href={"#contact"}
                 className="btn bg-[#295cc9] h-16 text-white w-full rounded-md text-[24px] leading-8 font-semibold hover:scale-110 hover:bg-[#295cc9]"
                 onClick={closeMenu}
               >
