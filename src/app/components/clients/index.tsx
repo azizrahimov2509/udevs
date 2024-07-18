@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/context";
 import { translations, Language } from "@/contexts/translation";
 import { fonon, deliver, smsuz, mytaxi, workly, maxtrack } from "../Images";
+import Image from "next/image";
 
 export default function Clients() {
   const { state } = useLanguage();
@@ -50,7 +51,9 @@ export default function Clients() {
           <div className="scroll-container  mb-4">
             <div className="scroll-left flex gap-5 pb-7 p-2 custom:p-0">
               {imagesRow1.map((src, index) => (
-                <img
+                <Image
+                  width={213}
+                  height={128}
                   key={index}
                   src={src}
                   alt={`logo-${index}`}
@@ -59,7 +62,9 @@ export default function Clients() {
               ))}
 
               {imagesRow1.map((src, index) => (
-                <img
+                <Image
+                  width={213}
+                  height={128}
                   key={`dup-${index}`}
                   src={src}
                   alt={`logo-${index}`}
@@ -75,7 +80,9 @@ export default function Clients() {
              "
             >
               {imagesRow2.map((src, index) => (
-                <img
+                <Image
+                  width={213}
+                  height={128}
                   key={index}
                   src={src}
                   alt={`logo-${index}`}
@@ -83,7 +90,9 @@ export default function Clients() {
                 />
               ))}
               {imagesRow2.map((src, index) => (
-                <img
+                <Image
+                  width={213}
+                  height={128}
                   key={`dup-${index}`}
                   src={src}
                   alt={`logo-${index}`}

@@ -3,6 +3,7 @@ import { logo, eng, rus } from "../Images/index";
 import Link from "next/link";
 import { useLanguage } from "@/contexts/context";
 import { translations, Language } from "@/contexts/translation";
+import Image from "next/image";
 
 const DropdownMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -78,20 +79,35 @@ const DropdownMenu = () => {
               </svg>
             </button>
             <div className="absolute top-0 left-0 p-4 flex items-center gap-3">
-              <img
-                src={logo}
-                alt="logo"
-                className="w-24 h-8"
-                width={96}
-                height={32}
-              />
+              <a href="#home">
+                <img
+                  src={logo}
+                  alt="logo"
+                  className="w-24 h-8"
+                  width={96}
+                  height={32}
+                />
+              </a>
+
               <div className="w-full flex items-center justify-center gap-7 mt-4">
                 <button onClick={() => ChangeLanguage("eng")}>
-                  <img className="w-7 h-7" src={eng} alt="English flag" />
+                  <Image
+                    width={28}
+                    height={28}
+                    className="w-7 h-7"
+                    src={eng}
+                    alt="English flag"
+                  />
                   <span className="font-semibold text-base">Eng</span>
                 </button>
                 <button onClick={() => ChangeLanguage("ru")}>
-                  <img className="w-7 h-7" src={rus} alt="Russian flag" />
+                  <Image
+                    width={28}
+                    height={28}
+                    className="w-7 h-7"
+                    src={rus}
+                    alt="Russian flag"
+                  />
                   <span className="font-semibold text-base">Русс</span>
                 </button>
               </div>

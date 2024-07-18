@@ -5,6 +5,7 @@ import { useLanguage } from "@/contexts/context";
 import { translations, Language } from "@/contexts/translation";
 import { useMediaQuery } from "react-responsive";
 import { architecture, back, develops, front, qa, uXUi } from "../Images";
+import Image from "next/image";
 
 export default function ItConsulting() {
   const { state } = useLanguage();
@@ -36,7 +37,7 @@ export default function ItConsulting() {
             transition={{ duration: 0.5, delay: 0.8 }}
             className="mb-10 flex items-center justify-center"
           >
-            <img
+            <Image
               src="https://udevs.io/static/consulting-41b53d1dd307a65f09f8017660a0304c.svg"
               alt="teamIcon"
               height={419}
@@ -65,19 +66,19 @@ export default function ItConsulting() {
             <div>
               <div className="flex items-start w-[500px] my-[10px] gap-4 custom:w-[450px] flex-wrap custom:justify-center ">
                 <div className="flex flex-col items-start justify-between bg-[#f4f7ff] p-[10px] w-[150px] h-[118px] rounded-lg phone:w-[110px] phonesm:w-[100px] ">
-                  <img width={56} height={56} src={front} alt="front" />
+                  <Image width={56} height={56} src={front} alt="front" />
                   <p className="text-lg font-semibold phone:text-sm">
                     Frontend
                   </p>
                 </div>
 
                 <div className="flex flex-col items-start justify-between bg-[#f4f7ff] p-[10px] w-[150px] h-[118px] rounded-lg phone:w-[110px]">
-                  <img width={56} height={56} src={back} alt="back" />
+                  <Image width={56} height={56} src={back} alt="back" />
                   <p className="text-lg font-semibold phone:text-sm">Backend</p>
                 </div>
 
                 <div className="flex flex-col items-start justify-between bg-[#f4f7ff] p-[10px] w-[150px] h-[118px] rounded-lg phone:w-[110px]">
-                  <img
+                  <Image
                     width={56}
                     height={56}
                     src={architecture}
@@ -89,17 +90,17 @@ export default function ItConsulting() {
                 </div>
 
                 <div className="flex flex-col items-start justify-between bg-[#f4f7ff] p-[10px] w-[150px] h-[118px] rounded-lg phone:w-[110px]">
-                  <img width={56} height={56} src={develops} alt="develops" />
+                  <Image width={56} height={56} src={develops} alt="develops" />
                   <p className="text-lg font-semibold phone:text-sm">DevOps</p>
                 </div>
 
                 <div className="flex flex-col items-start justify-between bg-[#f4f7ff] p-[10px] w-[150px] h-[118px] rounded-lg phone:w-[110px]">
-                  <img width={56} height={56} src={uXUi} alt="uXUi" />
+                  <Image width={56} height={56} src={uXUi} alt="uXUi" />
                   <p className="text-lg font-semibold phone:text-sm">UX/UI</p>
                 </div>
 
                 <div className="flex flex-col items-start justify-between bg-[#f4f7ff] p-[10px] w-[150px] h-[118px] rounded-lg phone:w-[110px]">
-                  <img width={56} height={56} src={qa} alt="qa" />
+                  <Image width={56} height={56} src={qa} alt="qa" />
                   <p className="text-lg font-semibold phone:text-sm">QA</p>
                 </div>
               </div>
@@ -112,7 +113,7 @@ export default function ItConsulting() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.8 }}
             >
-              <img
+              <Image
                 src="https://udevs.io/static/consulting-41b53d1dd307a65f09f8017660a0304c.svg"
                 alt="teamIcon"
                 height={419}

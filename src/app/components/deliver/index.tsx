@@ -12,6 +12,7 @@ import {
   website,
 } from "../Images";
 import { useMediaQuery } from "react-responsive";
+import Image from "next/image";
 
 export default function Deliver() {
   const { state } = useLanguage();
@@ -35,7 +36,7 @@ export default function Deliver() {
               transition={{ duration: 0.5, delay: 0.8 }}
               className="mb-10 flex items-center justify-center"
             >
-              <img
+              <Image
                 src="https://udevs.io/static/delever_app-d50b0f5953ce60eec080bad20fe68a78.png"
                 alt="teamIcon"
                 height={407}
@@ -51,15 +52,16 @@ export default function Deliver() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <img
+            <Image
               width={252}
               height={49}
               src={deliverlogo}
+              alt="deliverlogo"
               className="text-[64px] text-[#1b5bf7] leading-[64px] font-bold mb-11 custom:text-[32px] custom:text-center custom:leading-[20px]"
             />
 
             <span className="flex items-center rounded-2xl bg-[#ff562233] text-sm text-[#ff5722] py-1 px-4 font-medium text-center w-[117px] h-[36px] mb-4">
-              <img
+              <Image
                 src={delivery}
                 width={25}
                 height={25}
@@ -76,7 +78,7 @@ export default function Deliver() {
                 transition={{ duration: 0.5, delay: 0.8 }}
                 className="mb-10 flex items-center justify-center"
               >
-                <img
+                <Image
                   src="https://udevs.io/static/delever_app-d50b0f5953ce60eec080bad20fe68a78.png"
                   alt="teamIcon"
                   height={407}
@@ -98,7 +100,7 @@ export default function Deliver() {
 
             <div className="flex items-start w-[500px] my-[10px] gap-4 flex-wrap custom:w-[400px] custom:justify-center phone:items-center">
               <div className="flex flex-col items-start justify-between bg-[#e0e8ff] p-[10px] w-[150px] h-[118px] rounded-lg custom:h-[110px]">
-                <img
+                <Image
                   width={56}
                   height={56}
                   src={website}
@@ -109,7 +111,7 @@ export default function Deliver() {
               </div>
 
               <div className="flex flex-col items-start justify-between bg-[#e0e8ff] p-[10px] w-[150px] h-[118px] rounded-lg custom:h-[110px]">
-                <img
+                <Image
                   width={56}
                   height={56}
                   src={adminPanel}
@@ -122,7 +124,7 @@ export default function Deliver() {
               </div>
 
               <div className="flex flex-col items-start justify-between bg-[#e0e8ff] p-[10px] w-[150px] h-[118px] rounded-lg custom:h-[110px]">
-                <img
+                <Image
                   width={56}
                   height={56}
                   src={crossplatform}
@@ -135,7 +137,7 @@ export default function Deliver() {
               </div>
 
               <div className="flex flex-col items-start justify-between bg-[#e0e8ff] p-[10px] w-[150px] h-[118px] rounded-lg custom:h-[110px]">
-                <img
+                <Image
                   width={56}
                   height={56}
                   src={webDesign}
@@ -148,7 +150,7 @@ export default function Deliver() {
               </div>
 
               <div className="flex flex-col items-start justify-between bg-[#e0e8ff] p-[10px] w-[150px] h-[118px] rounded-lg custom:h-[110px]">
-                <img
+                <Image
                   width={56}
                   height={56}
                   src={mob}

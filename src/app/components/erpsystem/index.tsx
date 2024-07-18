@@ -4,6 +4,7 @@ import { useLanguage } from "@/contexts/context";
 import { translations, Language } from "@/contexts/translation";
 
 import { crm, eCommerce, eLearning, pos, smsEmail, warehouse } from "../Images";
+import Image from "next/image";
 
 export default function Erpsystem() {
   const { state } = useLanguage();
@@ -30,7 +31,7 @@ export default function Erpsystem() {
         <div className="flex items-start justify-between pb-20 custom:flex-col custom:items-center gap-7">
           <div className="flex flex-col items-center">
             <div className="relative flex flex-col items-center">
-              <img
+              <Image
                 src="https://udevs.io/static/bg_pattern-bfa00f19a06604ab492274cd3d9ea5cf.png"
                 alt="mobileapp"
                 className="relative"
@@ -43,7 +44,7 @@ export default function Erpsystem() {
                 transition={{ duration: 0.5, delay: 0.8 }}
                 className="absolute bottom-0 left-0 w-full h-full flex justify-center items-center"
               >
-                <img
+                <Image
                   src="https://udevs.io/static/desktop-be2444bb4c87961054714533a5d5a728.png"
                   alt="hero2"
                   height={297}
@@ -70,7 +71,7 @@ export default function Erpsystem() {
 
             <div className="flex items-start w-[500px] my-[10px] gap-4 flex-wrap custom:w-[400px] custom:justify-center phone:items-center">
               <div className="flex flex-col items-start justify-between bg-[#e0e8ff] p-[10px] w-[150px] h-[118px] rounded-lg custom:h-[110px]">
-                <img
+                <Image
                   width={56}
                   height={56}
                   src={crm}
@@ -81,7 +82,7 @@ export default function Erpsystem() {
               </div>
 
               <div className="flex flex-col items-start justify-between bg-[#e0e8ff] p-[10px] w-[150px] h-[118px] rounded-lg custom:h-[110px]">
-                <img
+                <Image
                   width={56}
                   height={56}
                   src={eLearning}
@@ -94,7 +95,7 @@ export default function Erpsystem() {
               </div>
 
               <div className="flex flex-col items-start justify-between bg-[#e0e8ff] p-[10px] w-[150px] h-[118px] rounded-lg custom:h-[110px]">
-                <img
+                <Image
                   width={56}
                   height={56}
                   src={eCommerce}
@@ -107,7 +108,7 @@ export default function Erpsystem() {
               </div>
 
               <div className="flex flex-col items-start justify-between bg-[#e0e8ff] p-[10px] w-[150px] h-[118px] rounded-lg custom:h-[110px]">
-                <img
+                <Image
                   width={56}
                   height={56}
                   src={pos}
@@ -118,7 +119,7 @@ export default function Erpsystem() {
               </div>
 
               <div className="flex flex-col items-start justify-between bg-[#e0e8ff] p-[10px] w-[150px] h-[118px] rounded-lg custom:h-[110px]">
-                <img
+                <Image
                   width={56}
                   height={56}
                   src={smsEmail}
@@ -131,7 +132,7 @@ export default function Erpsystem() {
               </div>
 
               <div className="flex flex-col items-start justify-between bg-[#e0e8ff] p-[10px] w-[150px] h-[118px] rounded-lg custom:h-[110px]">
-                <img
+                <Image
                   width={56}
                   height={56}
                   src={warehouse}

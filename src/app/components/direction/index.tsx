@@ -3,14 +3,20 @@ import React from "react";
 import { useLanguage } from "@/contexts/context";
 import { translations, Language } from "@/contexts/translation";
 import {
+  erp,
   erpsystem,
+  interfaceBig,
+  itconBig,
   itConsulting,
+  mob,
   mobile,
+  optimbig,
   optimization,
   team,
   userinterface,
 } from "../Images";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 function Direction() {
   const { state } = useLanguage();
@@ -41,7 +47,7 @@ function Direction() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4, delay: 0.2 }}
             >
-              <img
+              <Image
                 src={team}
                 width={35}
                 height={35}
@@ -58,10 +64,10 @@ function Direction() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4, delay: 0.3 }}
             >
-              <img
-                src={mobile}
-                width={60}
-                height={60}
+              <Image
+                src={mob}
+                width={35}
+                height={35}
                 alt="photo"
                 className="mb-5"
               />
@@ -75,10 +81,10 @@ function Direction() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4, delay: 0.4 }}
             >
-              <img
-                src={erpsystem}
-                width={60}
-                height={60}
+              <Image
+                src={erp}
+                width={30}
+                height={30}
                 alt="photo"
                 className="mb-5"
               />
@@ -92,10 +98,10 @@ function Direction() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4, delay: 0.5 }}
             >
-              <img
-                src={userinterface}
-                width={60}
-                height={60}
+              <Image
+                src={interfaceBig}
+                width={30}
+                height={30}
                 alt="photo"
                 className="mb-5"
               />
@@ -109,10 +115,10 @@ function Direction() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4, delay: 0.6 }}
             >
-              <img
-                src={optimization}
-                width={60}
-                height={60}
+              <Image
+                src={optimbig}
+                width={30}
+                height={30}
                 alt="photo"
                 className="mb-5"
               />
@@ -126,10 +132,10 @@ function Direction() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4, delay: 0.7 }}
             >
-              <img
-                src={itConsulting}
-                width={60}
-                height={60}
+              <Image
+                src={itconBig}
+                width={30}
+                height={30}
                 alt="photo"
                 className="mb-5"
               />

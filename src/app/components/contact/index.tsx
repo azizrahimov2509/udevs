@@ -268,14 +268,44 @@ export default function Contact() {
 
       {isModalOpen && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h2 className="text-2xl font-bold mb-4">Successfully sent</h2>
+          <div className="flex flex-col items-center justify-center bg-white p-6 rounded-lg shadow-lg w-1/3 relative phone:w-1/2 screen430:w-[250px]">
             <button
               onClick={() => setIsModalOpen(false)}
-              className="btn bg-[#1b5bf7] text-white"
+              className="absolute top-2 right-2 text-gray-600 hover:text-gray-900"
             >
-              Close
+              <svg
+                className="w-6 h-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
             </button>
+
+            <svg
+              className="MuiSvgIcon-root custom:w-[120px] custom:h-[120px]  iPad:w-[100px] iPad:h-[100px] "
+              focusable="false"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              fill="#1b5bf7"
+              width={150}
+              height={150}
+            >
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
+            </svg>
+            <h2 className="text-2xl font-bold text-center mb-4 custom:text-xl iPad:text-lg phone:text-base">
+              Your application is accepted
+            </h2>
+            <h3 className="text-xl font-bold mb-4 text-center  custom:text-lg iPad:text-base phone:text-sm ">
+              We will contact you soon
+            </h3>
           </div>
         </div>
       )}

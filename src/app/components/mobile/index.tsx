@@ -11,6 +11,7 @@ import {
   kotlin,
   swift,
 } from "../Images";
+import Image from "next/image";
 
 export default function Mobile() {
   const { state } = useLanguage();
@@ -38,7 +39,7 @@ export default function Mobile() {
         {isCustomScreen && (
           <div className="flex flex-col items-center">
             <div className="relative flex flex-col items-center">
-              <img
+              <Image
                 src="https://udevs.io/static/bg_pattern-bfa00f19a06604ab492274cd3d9ea5cf.png"
                 alt="mobileapp"
                 className="relative"
@@ -51,7 +52,7 @@ export default function Mobile() {
                 transition={{ duration: 0.5, delay: 0.8 }}
                 className="absolute bottom-0 left-0 w-full h-full flex justify-center items-center"
               >
-                <img
+                <Image
                   src="https://udevs.io/static/mobile_dev-6180df87085fd146c501a19e6156fbd2.png"
                   alt="hero2"
                   height={472}
@@ -81,15 +82,15 @@ export default function Mobile() {
 
             <div className="flex items-start w-[500px] my-[10px] gap-4 custom:w-[450px] custom:justify-center">
               <div className="flex flex-col items-start justify-between bg-[#f4f7ff] p-[10px] w-[150px] h-[118px] rounded-lg phone:w-[110px] phonesm:w-[100px] ">
-                <img width={56} height={56} src={apple} alt="apple" />
+                <Image width={56} height={56} src={apple} alt="apple" />
                 <p className="text-lg font-semibold phone:text-sm">iOS</p>
               </div>
               <div className="flex flex-col items-start justify-between bg-[#f4f7ff] p-[10px] w-[150px] h-[118px] rounded-lg phone:w-[110px]">
-                <img width={56} height={56} src={android} alt="apple" />
+                <Image width={56} height={56} src={android} alt="apple" />
                 <p className="text-lg font-semibold phone:text-sm">Android</p>
               </div>
               <div className="flex flex-col items-start justify-between bg-[#f4f7ff] p-[10px] w-[150px] h-[118px] rounded-lg phone:w-[110px]">
-                <img width={56} height={56} src={crossplatform} alt="apple" />
+                <Image width={56} height={56} src={crossplatform} alt="apple" />
                 <p className="text-lg font-semibold phone:text-sm">
                   Crossplatform
                 </p>
@@ -107,15 +108,15 @@ export default function Mobile() {
               </motion.h1>
               <div className="flex items-center gap-10 flex-wrap ">
                 <div>
-                  <img src={swift} alt="swift" />
+                  <Image width={56} height={56} src={swift} alt="swift" />
                   <p className="text-[20px] font-semibold text-black">Swift</p>
                 </div>
                 <div>
-                  <img src={kotlin} alt="kotlin" />
+                  <Image width={56} height={56} src={kotlin} alt="kotlin" />
                   <p className="text-[20px] font-semibold text-black">Kotlin</p>
                 </div>
                 <div>
-                  <img src={flutter} alt="flutter" />
+                  <Image width={56} height={56} src={flutter} alt="flutter" />
                   <p className="text-[20px] font-semibold text-black">
                     Flutter
                   </p>
@@ -127,7 +128,7 @@ export default function Mobile() {
           {!isCustomScreen && (
             <div className="flex flex-col items-center">
               <div className="relative flex flex-col items-center">
-                <img
+                <Image
                   src="https://udevs.io/static/bg_pattern-bfa00f19a06604ab492274cd3d9ea5cf.png"
                   alt="mobileapp"
                   className="relative"
@@ -140,7 +141,7 @@ export default function Mobile() {
                   transition={{ duration: 0.5, delay: 0.8 }}
                   className="absolute bottom-0 left-0 w-full h-full flex justify-center items-center"
                 >
-                  <img
+                  <Image
                     src="https://udevs.io/static/mobile_dev-6180df87085fd146c501a19e6156fbd2.png"
                     alt="hero2"
                     height={472}

@@ -15,6 +15,7 @@ import {
   ux,
   webDesign,
 } from "../Images";
+import Image from "next/image";
 
 export default function UiDesign() {
   const { state } = useLanguage();
@@ -42,7 +43,7 @@ export default function UiDesign() {
         {isCustomScreen && (
           <div className="flex flex-col items-center">
             <div className="relative flex flex-col items-center">
-              <img
+              <Image
                 src="https://udevs.io/static/bg_pattern-bfa00f19a06604ab492274cd3d9ea5cf.png"
                 alt="mobileapp"
                 className="relative"
@@ -55,7 +56,7 @@ export default function UiDesign() {
                 transition={{ duration: 0.5, delay: 0.8 }}
                 className="absolute bottom-0 left-0 w-full h-full flex justify-center items-center"
               >
-                <img
+                <Image
                   src="https://udevs.io/static/design-0951fd1e6afedab989f63e037535430f.png"
                   alt="hero2"
                   height={472}
@@ -85,38 +86,38 @@ export default function UiDesign() {
 
             <div className="flex items-start w-[500px] my-[10px] gap-4 custom:w-[450px] flex-wrap custom:justify-center ">
               <div className="flex flex-col items-start justify-between bg-[#f4f7ff] p-[10px] w-[150px] h-[118px] rounded-lg phone:w-[110px] phonesm:w-[100px] ">
-                <img width={56} height={56} src={ux} alt="apple" />
+                <Image width={56} height={56} src={ux} alt="apple" />
                 <p className="text-lg font-semibold phone:text-sm">UX</p>
               </div>
 
               <div className="flex flex-col items-start justify-between bg-[#f4f7ff] p-[10px] w-[150px] h-[118px] rounded-lg phone:w-[110px]">
-                <img width={56} height={56} src={ui} alt="apple" />
+                <Image width={56} height={56} src={ui} alt="apple" />
                 <p className="text-lg font-semibold phone:text-sm">UI</p>
               </div>
 
               <div className="flex flex-col items-start justify-between bg-[#f4f7ff] p-[10px] w-[150px] h-[118px] rounded-lg phone:w-[110px]">
-                <img width={56} height={56} src={prototyping} alt="apple" />
+                <Image width={56} height={56} src={prototyping} alt="apple" />
                 <p className="text-lg font-semibold phone:text-sm">
                   Prototyping
                 </p>
               </div>
 
               <div className="flex flex-col items-start justify-between bg-[#f4f7ff] p-[10px] w-[150px] h-[118px] rounded-lg phone:w-[110px]">
-                <img width={56} height={56} src={mob} alt="mob" />
+                <Image width={56} height={56} src={mob} alt="mob" />
                 <p className="text-lg font-semibold phone:text-sm">
                   Mobile Design
                 </p>
               </div>
 
               <div className="flex flex-col items-start justify-between bg-[#f4f7ff] p-[10px] w-[150px] h-[118px] rounded-lg phone:w-[110px]">
-                <img width={56} height={56} src={webDesign} alt="webdesgn" />
+                <Image width={56} height={56} src={webDesign} alt="webdesgn" />
                 <p className="text-lg font-semibold phone:text-sm">
                   Web Design
                 </p>
               </div>
 
               <div className="flex flex-col items-start justify-between bg-[#f4f7ff] p-[10px] w-[150px] h-[118px] rounded-lg phone:w-[110px]">
-                <img
+                <Image
                   width={56}
                   height={56}
                   src={atomicDesign}
@@ -139,7 +140,9 @@ export default function UiDesign() {
               </motion.h1>
               <div className="flex items-center gap-10 flex-wrap">
                 <div>
-                  <img
+                  <Image
+                    width={56}
+                    height={56}
                     src={figma}
                     alt="swift"
                     className="pb-1 custom:w-[38px] custom:h-[38px] "
@@ -149,7 +152,9 @@ export default function UiDesign() {
                   </p>
                 </div>
                 <div>
-                  <img
+                  <Image
+                    width={56}
+                    height={56}
                     src={sketch}
                     alt="kotlin"
                     className="pb-1 custom:w-[38px] custom:h-[38px] "
@@ -159,10 +164,12 @@ export default function UiDesign() {
                   </p>
                 </div>
                 <div>
-                  <img
+                  <Image
+                    width={40}
+                    height={56}
                     src={lottie}
-                    alt="flutter"
-                    className="pb-1 custom:w-[38px] custom:h-[38px] "
+                    alt="Lottie"
+                    className="pb-3 mb-1 custom:w-[38px] custom:h-[38px] "
                   />
                   <p className="text-[20px] font-semibold text-black  custom:text-[16px]">
                     Lottie
@@ -170,7 +177,12 @@ export default function UiDesign() {
                 </div>
 
                 <div>
-                  <img src={illustrator} alt="flutter" />
+                  <Image
+                    width={56}
+                    height={56}
+                    src={illustrator}
+                    alt="flutter"
+                  />
                   <p className="text-[20px] font-semibold text-black  custom:text-[16px]">
                     Illustrator
                   </p>
@@ -182,7 +194,7 @@ export default function UiDesign() {
           {!isCustomScreen && (
             <div className="flex flex-col items-center">
               <div className="relative flex flex-col items-center">
-                <img
+                <Image
                   src="https://udevs.io/static/bg_pattern-bfa00f19a06604ab492274cd3d9ea5cf.png"
                   alt="mobileapp"
                   className="relative"
@@ -195,7 +207,7 @@ export default function UiDesign() {
                   transition={{ duration: 0.5, delay: 0.8 }}
                   className="absolute bottom-0 left-0 w-full h-full flex justify-center items-center"
                 >
-                  <img
+                  <Image
                     src="https://udevs.io/static/design-0951fd1e6afedab989f63e037535430f.png"
                     alt="hero2"
                     height={472}

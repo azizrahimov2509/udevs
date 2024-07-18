@@ -14,6 +14,7 @@ import {
   goodzone,
 } from "../Images";
 import { useMediaQuery } from "react-responsive";
+import Image from "next/image";
 
 export default function Goodzone() {
   const { state } = useLanguage();
@@ -37,7 +38,7 @@ export default function Goodzone() {
               transition={{ duration: 0.5, delay: 0.8 }}
               className="mb-10 flex items-center justify-center"
             >
-              <img
+              <Image
                 src="https://udevs.io/static/goodzone_app-deb2ced5c71cc717322a0f87cfe94652.png"
                 alt="teamIcon"
                 height={407}
@@ -53,7 +54,7 @@ export default function Goodzone() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <img
+            <Image
               width={292}
               height={64}
               src={goodzone}
@@ -62,7 +63,7 @@ export default function Goodzone() {
             />
 
             <span className="flex items-center rounded-2xl bg-[#f5000036] text-sm text-[#f50000] py-1 px-4 font-medium text-center w-[155px] h-[36px] mb-4">
-              <img
+              <Image
                 src={korzinka}
                 width={25}
                 height={25}
@@ -79,7 +80,7 @@ export default function Goodzone() {
                 transition={{ duration: 0.5, delay: 0.8 }}
                 className="mb-10 flex items-center justify-center"
               >
-                <img
+                <Image
                   src="https://udevs.io/static/goodzone_app-deb2ced5c71cc717322a0f87cfe94652.png"
                   alt="teamIcon"
                   height={407}
@@ -101,7 +102,7 @@ export default function Goodzone() {
 
             <div className="flex items-start w-[500px] my-[10px] gap-4 flex-wrap custom:w-[400px] custom:justify-center phone:items-center">
               <div className="flex flex-col items-start justify-between bg-[#e0e8ff] p-[10px] w-[150px] h-[118px] rounded-lg custom:h-[110px]">
-                <img
+                <Image
                   width={56}
                   height={56}
                   src={website}
@@ -112,7 +113,7 @@ export default function Goodzone() {
               </div>
 
               <div className="flex flex-col items-start justify-between bg-[#e0e8ff] p-[10px] w-[150px] h-[118px] rounded-lg custom:h-[110px]">
-                <img
+                <Image
                   width={56}
                   height={56}
                   src={adminPanel}
@@ -125,7 +126,7 @@ export default function Goodzone() {
               </div>
 
               <div className="flex flex-col items-start justify-between bg-[#e0e8ff] p-[10px] w-[150px] h-[118px] rounded-lg custom:h-[110px]">
-                <img
+                <Image
                   width={56}
                   height={56}
                   src={crossplatform}
@@ -138,7 +139,7 @@ export default function Goodzone() {
               </div>
 
               <div className="flex flex-col items-start justify-between bg-[#e0e8ff] p-[10px] w-[150px] h-[118px] rounded-lg custom:h-[110px]">
-                <img
+                <Image
                   width={56}
                   height={56}
                   src={webDesign}
@@ -151,7 +152,7 @@ export default function Goodzone() {
               </div>
 
               <div className="flex flex-col items-start justify-between bg-[#e0e8ff] p-[10px] w-[150px] h-[118px] rounded-lg custom:h-[110px]">
-                <img
+                <Image
                   width={56}
                   height={56}
                   src={mob}

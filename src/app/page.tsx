@@ -154,7 +154,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="deliver" className="flex mt-2 px-6  ">
+      <section id="delever" className="flex mt-2 px-6  ">
         <div className="container">
           <Deliver />
         </div>

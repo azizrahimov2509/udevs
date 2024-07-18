@@ -1,8 +1,5 @@
 "use client";
-
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import styles from "@/app/components/Header/styles.module.css";
 import {
@@ -23,21 +20,28 @@ import {
 import { useLanguage } from "@/contexts/context";
 import { translations, Language } from "@/contexts/translation";
 import DropdownMenu from "../Dropdownmenu";
+import Link from "next/link";
+import Image from "next/image";
 
 const Header: React.FC = () => {
   const { state, ChangeLanguage } = useLanguage();
-
   const t = translations[state.language as Language];
+
+  const [activeLink, setActiveLink] = useState("");
+
+  const handleLinkClick = (link: string) => {
+    setActiveLink(link);
+  };
 
   return (
     <motion.div
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.2 }}
-      className={`fixed px-3 py-4 border-b-2 border-gray-200 w-full bg-white ${styles} z-50`}
+      className={`fixed px-3 py-4 border-b-2 border-gray-200 w-full bg-white ${styles.header} z-50`}
     >
-      <div className={`container mx-auto `}>
-        <header className={`${styles.header} `}>
+      <div className="container mx-auto">
+        <header className={`${styles.header}`}>
           <div className="flex items-center justify-between">
             <motion.nav
               initial={{ opacity: 0, y: -20 }}
@@ -45,7 +49,7 @@ const Header: React.FC = () => {
               transition={{ duration: 0.2 }}
             >
               <a href="#home">
-                <img
+                <Image
                   className="w-24 h-8"
                   width={96}
                   height={32}
@@ -62,42 +66,65 @@ const Header: React.FC = () => {
                 className={`flex items-center justify-between gap-9 text-[#18191f] text-sm list-none font-bold ${styles.headlist}`}
               >
                 <motion.li
-                  className="pb-3"
+                  className={`pb-3 ${
+                    activeLink === "direction"
+                      ? "border-b-2 border-blue-500"
+                      : ""
+                  }`}
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.2 }}
                 >
                   <a
                     href="#direction"
-                    className="pb-3 hover:border-b-2 border-blue-500"
+                    className="pb-3 hover:border-b-2 border-blue-500 cursor-pointer"
+                    onClick={() => handleLinkClick("direction")}
                   >
                     {t.direction}
                   </a>
                 </motion.li>
                 <motion.li
-                  className="pb-3"
+                  className={`pb-3 ${
+                    activeLink === "command" ? "border-b-2 border-blue-500" : ""
+                  }`}
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.2 }}
                 >
                   <a
                     href="#command"
-                    className="pb-3 hover:border-b-2 border-blue-500"
+                    className="pb-3 hover:border-b-2 border-blue-500 cursor-pointer"
+                    onClick={() => handleLinkClick("command")}
                   >
                     {t.command}
                   </a>
                 </motion.li>
 
                 <motion.li
-                  className={`relative group pb-3`}
+                  className={`relative group pb-3 ${
+                    activeLink === "services"
+                      ? "border-b-2 border-blue-500"
+                      : ""
+                  }`}
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.2 }}
                 >
                   <div className="dropdown dropdown-hover">
                     <div tabIndex={0} role="button" className="flex m-1">
-                      <a href="#services">{t.services}</a>
-                      <img src={arrow} alt={t.languages} />
+                      <a
+                        href="#services"
+                        className="cursor-pointer"
+                        onClick={() => handleLinkClick("services")}
+                      >
+                        {t.services}
+                      </a>
+                      <Image
+                        width={13}
+                        height={12}
+                        src={arrow}
+                        alt={t.languages}
+                      />
                     </div>
                     <ul
                       tabIndex={0}
@@ -106,9 +133,14 @@ const Header: React.FC = () => {
                       <p className="text-gray-500 mb-2 text-left py-3 pl-3">
                         {t.services}
                       </p>
-                      <li className="flex items-center mb-2 hover:bg-blue-500 hover:text-white font-normal ">
-                        <a href="#mobile" className="flex items-center w-full">
-                          <img
+                      <li className="flex items-center mb-2 hover:bg-blue-500 hover:text-white font-normal">
+                        <a
+                          href="#mobile"
+                          className="flex items-center w-full cursor-pointer"
+                        >
+                          <Image
+                            width={48}
+                            height={48}
                             className="w-12 h-12 mr-2"
                             src={mobile}
                             alt={t.mobile}
@@ -117,8 +149,13 @@ const Header: React.FC = () => {
                         </a>
                       </li>
                       <li className="flex items-center mb-2 hover:bg-blue-500 hover:text-white w-full font-normal">
-                        <a href="#erp" className="flex items-center w-full ">
-                          <img
+                        <a
+                          href="#erp"
+                          className="flex items-center w-full cursor-pointer"
+                        >
+                          <Image
+                            width={48}
+                            height={48}
                             className="w-12 h-12 mr-2"
                             src={erpsystem}
                             alt={t.erp}
@@ -127,8 +164,13 @@ const Header: React.FC = () => {
                         </a>
                       </li>
                       <li className="flex items-center mb-2 hover:bg-blue-500 hover:text-white w-full font-normal">
-                        <a href="#design" className="flex items-center w-full">
-                          <img
+                        <a
+                          href="#design"
+                          className="flex items-center w-full cursor-pointer"
+                        >
+                          <Image
+                            width={48}
+                            height={48}
                             className="w-12 h-12 mr-2"
                             src={userinterface}
                             alt={t.interface}
@@ -139,9 +181,11 @@ const Header: React.FC = () => {
                       <li className="flex items-center mb-2 hover:bg-blue-500 hover:text-white w-full font-normal">
                         <a
                           href="#consulting"
-                          className="flex items-center w-full"
+                          className="flex items-center w-full cursor-pointer"
                         >
-                          <img
+                          <Image
+                            width={48}
+                            height={48}
                             className="w-12 h-12 mr-2"
                             src={itConsulting}
                             alt={t.consulting}
@@ -152,9 +196,11 @@ const Header: React.FC = () => {
                       <li className="flex items-center mb-2 hover:bg-blue-500 hover:text-white w-full font-normal">
                         <a
                           href="#optimization"
-                          className="flex items-center w-full"
+                          className="flex items-center w-full cursor-pointer"
                         >
-                          <img
+                          <Image
+                            width={48}
+                            height={48}
                             className="w-12 h-12 mr-2"
                             src={optimization}
                             alt={t.optimization}
@@ -167,41 +213,63 @@ const Header: React.FC = () => {
                 </motion.li>
 
                 <motion.li
-                  className="pb-3"
+                  className={`pb-3 ${
+                    activeLink === "tools" ? "border-b-2 border-blue-500" : ""
+                  }`}
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.2 }}
                 >
                   <a
                     href="#tools"
-                    className="pb-3 hover:border-b-2 border-blue-500"
+                    className="pb-3 hover:border-b-2 border-blue-500 cursor-pointer"
+                    onClick={() => handleLinkClick("tools")}
                   >
                     {t.tools}
                   </a>
                 </motion.li>
                 <motion.li
-                  className="pb-3"
+                  className={`pb-3 ${
+                    activeLink === "clients" ? "border-b-2 border-blue-500" : ""
+                  }`}
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.2 }}
                 >
                   <a
                     href="#clients"
-                    className="pb-3 hover:border-b-2 border-blue-500"
+                    className="pb-3 hover:border-b-2 border-blue-500 cursor-pointer"
+                    onClick={() => handleLinkClick("clients")}
                   >
                     {t.clients}
                   </a>
                 </motion.li>
                 <motion.li
-                  className={`relative group pb-3 `}
+                  className={`relative group pb-3 ${
+                    activeLink === "portfolio"
+                      ? "border-b-2 border-blue-500"
+                      : ""
+                  }`}
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.2 }}
                 >
                   <div className="dropdown dropdown-hover">
                     <div tabIndex={0} role="button" className="flex m-1">
-                      <a href="#portfolio">{t.portfolio}</a>
-                      <img src={arrow} alt={t.languages} className="ml-2" />
+                      <a
+                        href="#portfolio"
+                        className="cursor-pointer"
+                        onClick={() => handleLinkClick("portfolio")}
+                      >
+                        {t.portfolio}
+                      </a>
+                      <Image
+                        width={13}
+                        height={12}
+                        src={arrow}
+                        alt={t.languages}
+                        className="ml-2"
+                      />
                     </div>
                     <ul
                       tabIndex={0}
@@ -212,32 +280,45 @@ const Header: React.FC = () => {
                       </p>
                       <li className="flex items-center mb-2 hover:bg-blue-500 hover:text-white font-normal">
                         <a
-                          href="#deliver"
-                          className="flex items-center w-full pl-7"
+                          href="#delever"
+                          className="flex items-center w-full pl-7 cursor-pointer"
+                          onClick={() => handleLinkClick("delever")}
                         >
-                          <img
+                          <Image
+                            width={48}
+                            height={48}
                             className="w-12 h-12 mr-2"
                             src={d}
-                            alt="deliver"
+                            alt="delever"
                           />
-                          <span>Deliver</span>
+                          <span>Delever</span>
                         </a>
                       </li>
                       <li className="flex items-center mb-2 hover:bg-blue-500 hover:text-white w-full font-normal">
                         <a
                           href="#sms-uz"
-                          className="flex items-center w-full pl-7"
+                          className="flex items-center w-full pl-7 cursor-pointer"
+                          onClick={() => handleLinkClick("sms-uz")}
                         >
-                          <img className="w-12 h-12 mr-2" src={s} alt="smsuz" />
+                          <Image
+                            width={48}
+                            height={48}
+                            className="w-12 h-12 mr-2"
+                            src={s}
+                            alt="smsuz"
+                          />
                           <span>Sms.uz</span>
                         </a>
                       </li>
                       <li className="flex items-center mb-2 hover:bg-blue-500 hover:text-white w-full font-normal">
                         <a
                           href="#goodzone"
-                          className="flex items-center w-full pl-7"
+                          className="flex items-center w-full pl-7 cursor-pointer"
+                          onClick={() => handleLinkClick("goodzone")}
                         >
-                          <img
+                          <Image
+                            width={48}
+                            height={48}
                             className="w-12 h-12 mr-2"
                             src={g}
                             alt="goodzone"
@@ -248,9 +329,16 @@ const Header: React.FC = () => {
                       <li className="flex items-center mb-2 hover:bg-blue-500 hover:text-white w-full font-normal">
                         <a
                           href="#iman"
-                          className="flex items-center w-full pl-7"
+                          className="flex items-center w-full pl-7 cursor-pointer"
+                          onClick={() => handleLinkClick("iman")}
                         >
-                          <img className="w-12 h-12 mr-2" src={i} alt="iman" />
+                          <Image
+                            width={48}
+                            height={48}
+                            className="w-12 h-12 mr-2"
+                            src={i}
+                            alt="iman"
+                          />
                           <span>Iman</span>
                         </a>
                       </li>
@@ -259,7 +347,7 @@ const Header: React.FC = () => {
                 </motion.li>
 
                 <motion.li
-                  className={`relative group pb-3 `}
+                  className="relative group pb-3"
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.2 }}
@@ -267,7 +355,13 @@ const Header: React.FC = () => {
                   <div className="dropdown dropdown-hover">
                     <div tabIndex={0} role="button" className="flex  m-1">
                       <span>{t.languages}</span>
-                      <img src={arrow} alt={t.languages} className="ml-2" />
+                      <Image
+                        width={13}
+                        height={12}
+                        src={arrow}
+                        alt={t.languages}
+                        className="ml-2"
+                      />
                     </div>
                     <ul
                       tabIndex={0}
@@ -277,8 +371,10 @@ const Header: React.FC = () => {
                         className="flex items-center mb-2 hover:bg-blue-500 hover:text-white "
                         onClick={() => ChangeLanguage("eng")}
                       >
-                        <div className="flex items-center w-full ">
-                          <img
+                        <div className="flex items-center w-full cursor-pointer">
+                          <Image
+                            width={28}
+                            height={28}
                             className="w-7 h-7 mr-2"
                             src={eng}
                             alt="English flag"
@@ -290,8 +386,10 @@ const Header: React.FC = () => {
                         className="flex items-center mb-2 hover:bg-blue-500 hover:text-white "
                         onClick={() => ChangeLanguage("ru")}
                       >
-                        <div className="flex items-center w-full ">
-                          <img
+                        <div className="flex items-center w-full cursor-pointer">
+                          <Image
+                            width={28}
+                            height={28}
                             className="w-7 h-7 mr-2"
                             src={rus}
                             alt="Russian flag"

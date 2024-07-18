@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/context";
 import { translations, Language } from "@/contexts/translation";
 import { useMediaQuery } from "react-responsive";
+import Image from "next/image";
 
 export default function Command() {
   const [count, setCount] = useState(0);
@@ -51,7 +52,7 @@ export default function Command() {
             transition={{ duration: 0.5, delay: 0.8 }}
             className="mb-10 flex items-center justify-center"
           >
-            <img
+            <Image
               src="https://udevs.io/static/teamIcon-7e3107c853b8ec1d129a87af0e68945a.svg"
               alt="teamIcon"
               height={419}
@@ -93,7 +94,7 @@ export default function Command() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.8 }}
             >
-              <img
+              <Image
                 src="https://udevs.io/static/teamIcon-7e3107c853b8ec1d129a87af0e68945a.svg"
                 alt="teamIcon"
                 height={419}
