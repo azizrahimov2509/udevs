@@ -100,7 +100,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="direction" className="flex pt-2 px-6">
+      <section id="direction" className="flex pt-2 px-5">
         <div className="container">
           <Direction />
         </div>
